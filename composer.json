@@ -1,0 +1,23 @@
+{
+  "name": "t3brightside/imagelazyload",
+  "description": "Images lazy load control for pagelist, personnel, gallerycontent, and custom elements.",
+  "type": "typo3-cms-extension",
+  "keywords": ["TYPO3", "optimize", "lazyload", "images"],
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://t3brightside.com",
+  "authors": [
+      {
+          "name": "Tanel Põld",
+          "role": "Developer",
+          "homepage": "https://t3brightside.com"
+      }
+  ],
+  "require": {
+    "typo3/cms-core": "^11.5 || ^12.0"
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "imagelazyload"
+    }
+  }
+}
