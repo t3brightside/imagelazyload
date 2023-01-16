@@ -1,2 +1,4 @@
 * 1.0.0
 	- The start
+* 1.0.1
+	- Move TCA to actual extensions palettes instead of str_replace
