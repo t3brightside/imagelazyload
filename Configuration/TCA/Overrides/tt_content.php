@@ -31,41 +31,6 @@ $tempColumns = array(
 
 ExtensionManagementUtility::addTCAcolumns('tt_content', $tempColumns);
 
-if ($extensionConfiguration['personnelEnablePagination']) {
-    $GLOBALS['TCA']['tt_content']['types']['personnel_frompages']['showitem'] = str_replace(
-        ';personnelFilters,',
-        ';personnelFilters,
-		--palette--;Pagination;paginatedprocessors,',
-        $GLOBALS['TCA']['tt_content']['types']['personnel_frompages']['showitem']
-    );
-}
-
 $GLOBALS['TCA']['tt_content']['palettes']['imagelazyload']['showitem'] = '
 	tx_imagelazyload,
 ';
-
-// Add lazy loading to ext:personnel
-$GLOBALS['TCA']['tt_content']['palettes']['personnelLayout']['showitem'] = str_replace(
-    'tx_personnel_images',
-    'tx_personnel_images,tx_imagelazyload,',
-    $GLOBALS['TCA']['tt_content']['palettes']['personnelLayout']['showitem']
-);
-
-// Add lazy loading to ext:pagelist
-$GLOBALS['TCA']['tt_content']['palettes']['pagelist_layout']['showitem'] = str_replace(
-    'tx_pagelist_disableimages',
-    'tx_pagelist_disableimages,tx_imagelazyload,',
-    $GLOBALS['TCA']['tt_content']['palettes']['pagelist_layout']['showitem']
-);
-$GLOBALS['TCA']['tt_content']['palettes']['pagelist_selected_layout']['showitem'] = str_replace(
-    'tx_pagelist_disableimages',
-    'tx_pagelist_disableimages,tx_imagelazyload,',
-    $GLOBALS['TCA']['tt_content']['palettes']['pagelist_selected_layout']['showitem']
-);
-
-// Add lazy load to ext:gallerycontent
-$GLOBALS['TCA']['tt_content']['palettes']['gallerycontentLayout']['showitem'] = str_replace(
-    'tx_gallerycontent_template',
-    'tx_gallerycontent_template,tx_imagelazyload,',
-    $GLOBALS['TCA']['tt_content']['palettes']['gallerycontentLayout']['showitem']
-);
