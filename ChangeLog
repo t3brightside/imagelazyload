@@ -2,3 +2,5 @@
 	- The start
 * 1.0.1
 	- Move TCA to actual extensions palettes instead of str_replace
+1.1.0
+	- Drop v11 support and add for v13
