@@ -4,3 +4,5 @@
 	- Move TCA to actual extensions palettes instead of str_replace
 1.1.0
 	- Drop v11 support and add for v13
+1.1.1
+	- fix versioning and compatibility in ext_emconf
